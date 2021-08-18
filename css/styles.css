@@ -110,8 +110,15 @@ iframe {
   padding: 0 1% 1%;
 }
 
-li {
+
+.left {
   text-align: left;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1rem;
+  list-style-type:none;
 }
 
 .regdis {
