@@ -1,0 +1,20 @@
+//This is event widget with extra description//
+//Current use: none//
+
+<h3 class="birthday">🎉Happy 1st anniversary<br> Kolbeh Bazee ba Farsi!🎉<br><span style="font-size: 65%;">Check out the new 2020-2021<br>section to see everything we<br> have been working on this year!</span></h3> 
+
+
+
+
+//This is event widget without extra description//
+//Current use: none///
+
+<h3 class="birthday">🎉Happy 1st anniversary<br> Kolbeh Bazee ba Farsi!🎉</h3>
+
+
+
+
+//This is registration link with navbar-brand class for navbar//
+//Current use: no need for registration//
+
+<a class="wrs" class="reg navbar-brand wrs" href="registration.html">Winter Registration</a>
