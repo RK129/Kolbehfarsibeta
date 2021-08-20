@@ -103,8 +103,23 @@
    
     <br>
     <br>
+    <h5>You may continue after 10 seconds has passed!</h5>
+    <br>
     <a style="margin-right: 1rem;" href="registrationp1.html" class="mycnuButton">Back</a>
-    <a href="registrationp3.html" class="mycnuButton">Continue</a>
+    <a href="registrationp3.html" id="some-button" class="mycnuButton">Continue</a>
+    <script>
+        document.getElementById("some-button").style.display = "none";
+
+        function showStuff() {
+            document.getElementById("some-button").style.display = "inline";
+        }
+
+        function myFunction() {
+            window.location = "project.html"
+        }
+
+        setTimeout(showStuff, 10000);
+    </script>
     <br>
     <br>
     </html>
