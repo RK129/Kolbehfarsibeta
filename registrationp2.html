@@ -103,11 +103,17 @@
    
     <br>
     <br>
-    <h5>You may continue after 10 seconds has passed!</h5>
+    <h5 id="msg-succes">You may continue after 10 seconds has passed! <span style="color: orange">For testing, you may continue at any time. However, this message will still disapear after 10 seconds</span></h5>
+    <script>
+      setTimeout(function(){
+        var msg = document.getElementById("msg-succes");
+        msg.parentNode.removeChild(msg);
+      }, 10000);
+  </script>
     <br>
     <a style="margin-right: 1rem;" href="registrationp1.html" class="mycnuButton">Back</a>
     <a href="registrationp3.html" id="some-button" class="mycnuButton">Continue</a>
-    <script>
+    <!-- <script>
         document.getElementById("some-button").style.display = "none";
 
         function showStuff() {
@@ -119,7 +125,7 @@
         }
 
         setTimeout(showStuff, 10000);
-    </script>
+    </script> -->
     <br>
     <br>
     </html>
