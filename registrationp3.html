@@ -62,8 +62,23 @@
   </div>
  
   <h5 style="margin-bottom: 1rem; color: red;">Make sure to click "submit" before continuing!</h5>
-  <a style="margin-right: 1rem;" href="registrationp2.html" class="mycnuButton">Back</a>
-  <a href="registrationp4.html" class="mycnuButton">Continue</a>
+  <h5>You can continue after 30 seconds has passed!</h5>
+  <br>
+  <a style="margin-right: 1rem;" href="registrationp2.html" class="mycnuButton">Back</a> 
+  <a href="registrationp4.html" id="some-button" class="mycnuButton">Continue</a>
+    <script>
+        document.getElementById("some-button").style.display = "none";
+
+        function showStuff() {
+            document.getElementById("some-button").style.display = "inline";
+        }
+
+        function myFunction() {
+            window.location = "project.html"
+        }
+
+        setTimeout(showStuff, 30000);
+    </script>
   <br>
   <br>
 </html>
