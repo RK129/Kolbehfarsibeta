@@ -17,7 +17,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 
-<body class="body" style="background-color: #cefff1; text-align: center;">
+<body class="body" style="background-color: #cefff1;">
 
   <nav class="navbar navbar-expand-lg navbar-light navbar-right" style="background-color: #71c9ce;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,27 +54,31 @@
   <br>
   <h5>Make sure to fill out this form and the next form using the same name and contacts!</h5>
   <br>
-  <br>  
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJ7CH-AYdFRY-KBKuU8XvF2qn288ua7N9cpSIPd11y2laXGw/viewform?embedded=true" width="640" height="1719" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  <h5 id="msg-succes">You may continue after you submit the form</h5>
+<br>  
+ <br>
+ <!-- <p id='demo' style='display: none'><a href="registrationp4.html" id="demo" class="mycnuButton">Continue</a></p>      -->
+ <button type='button' class="verifybutton" onclick="toggleText()">Verify</button>
   <br>
   <br>
-  <a href="registrationp2.html" class="mycnuButton">Back</a> 
-  <a href="registrationp4.html" id="some-button" class="mycnuButton regbuttonpositioning">Continue</a>
-
-    <script>
-        document.getElementById("some-button").style.display = "none";
-
-        function showStuff() {
-            document.getElementById("some-button").style.display = "inline";
-        }
-
-        function myFunction() {
-            window.location = "project.html"
-        }
-
-        setTimeout(showStuff, 30000);
-    </script>
+  <h5 id="msg-succes">You may continue after you Submit and Verify</h5>
+  <br>
+  <br>
+  <p id='demo' style='display: none; width: 10%; margin: 0 auto;'><a href="registrationp4.html" class="mycnuButton">Continue</a></p>
+  <br>
+  <a href="registrationp2.html" style="margin-right: 1rem;" class="mycnuButton">Back</a> 
+  <!-- <button type="submit" id="roll" class="btn btn-default">Roll Branch1 </button> 			 -->
+	<!-- <button type="submit" href="registrationp4.html" name="clicked" id="clicked" class="mycnuButton" onblur="validate()" disabled="true" href="registrationp4.html">Continue</button> -->
+  <script>
+    function toggleText() {
+      var text = document.getElementById("demo");
+      if (text.style.display === "none") {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+  </script>
   <br>
   <br>
 </html>

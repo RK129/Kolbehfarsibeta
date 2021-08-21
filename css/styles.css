@@ -109,6 +109,10 @@
   text-decoration: none;
 }
 
+.verifybutton:hover {
+  background-color: #146ece;
+}
+
 iframe {
   padding: 0 1% 1%;
 }
@@ -320,7 +324,7 @@ iframe {
 
 .regbuttonpositioning {
   position: relative;
-  bottom: 96rem;
+  bottom: 80rem;
   z-index: -1;
   margin-left: -1rem;
 }
@@ -331,6 +335,28 @@ iframe {
   width: 55%;
   margin-bottom: 5%;
   color: lime;
+}
+
+.verifybutton {
+    clear: both;
+    background-color: #0074ed  ;
+    border: 0 none;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    margin-right: 31rem;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 22px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
 }
 
 .padnav {
@@ -651,6 +677,7 @@ iframe {
 	padding:10px 23px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #283966;
+  text-align: center;
 }
 .mycnuButton:hover {
 	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
