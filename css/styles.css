@@ -37,6 +37,9 @@
   .step {
     font-size: 1.4rem;
   }
+  .regformmf {
+    height: 100rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -313,6 +316,13 @@ iframe {
 .con2 {
   position: relative;
   right: 100%;
+}
+
+.regbuttonpositioning {
+  position: relative;
+  bottom: 96rem;
+  z-index: -1;
+  margin-left: -1rem;
 }
 
 .borderindex {
@@ -648,9 +658,9 @@ iframe {
   color: cyan;
   text-decoration: none;
 }
-.mycnuButton:active {
+/* .mycnuButton:active {
 	position:relative;
 	top:1px;
-}
+} */
 
         
