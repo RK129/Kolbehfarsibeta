@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="photoshopedlogo808.ico">
+  <link rel="stylesheet" href="css\registration.css">
+</head>
+<body>
+
+    
+      <div class="main-block">
+        <div class="left-part">
+          <i class="fas fa-graduation-cap"></i>
+          <img class="img1" src="photoshopedlogo707.png" style="width: 50%;"  alt="Kolbeh Farsi Ba Bazi Logo">
+          <h1>Register Kolbeh Bazi Ba Farsi</h1>
+          <p></p>
+          <div class="btn-group">
+            <a class="btn-item btnstyle" href="edclasses.html">Our Educational Classes</a>
+            <a class="btn-item btnstyle" href="artclasses.html">Our Art Classes</a>
+          </div>
+        </div>
+        <form action="https://sheetdb.io/api/v1/lm568yg4bjulf" id="sheetdb-form" >
+          <div class="title">
+            <i class="fas fa-pencil-alt"></i> 
+            <!-- <h2>Register here</h2> -->
+          </div>
+          <div class="info">
+            <input required type="text" name="data[parent's name]" placeholder="Parent's Full name">
+            <input required type="text" name="data[parent's email]" placeholder="Parent's Email">
+            <input required type="text" name="data[parent's number]" placeholder="Parent's Phone number">
+            <input required type="text" name="data[student's name]" placeholder="Student's Full Name">
+            <input type="text" name="data[student's number]" placeholder="Student's Phone Number (optional)">
+            <input required type="text" name="data[student's date of birth]" placeholder="Student's Date of Birth">
+          </div>
+          <div class="checkbox">
+            <label>Classes:</label><br><br>
+            <!-- <input type="checkbox" class="checkboxsizing" name="data[1]" value="yes"/><span style="color: red;">Tuesday 4:00PM-4:30 PM</span> (educational workshop for 3-6 years old)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[2]" value="yes"/><span style="color: red;">Tuesday 5:00 PM-6:00PM</span> (Persian Alphabet B)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[3]" value="yes"/><span style="color: red;">Wednesday 5:00 PM</span> (Paiting class)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[4]" value="yes"/><span style="color: red;">Thursday 5:00 PM-6:00PM</span> (Persian Alphabet A)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[5]" value="yes"/><span style="color: red;">Friday 4:30 PM- 5:30 PM</span> (Iranology)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[6]" value="yes"/><span style="color: red;">Saturday 11:00 AM-12:00 PM</span> (Persian Conversation workshop)<br><br> -->
+            <input type="checkbox" class="checkboxsizing" name="data[Tuesday 4:00PM-4:30 PM (educational workshop)]" value="yes"/><span style="color: red;">Tuesday 4:00PM-4:30 PM </span>(educational workshop for 3-6 years)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Tuesday 5:00 PM-6:00PM (Alphabet B)]" value="yes"/><span style="color: red;">Tuesday 5:00 PM-6:00PM</span> (Persian Alphabet B)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Wednesday 5:00 PM (Painting class)]" value="yes"/><span style="color: red;">Wednesday 5:00 PM</span> (Painting class)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Thursday 5:00 PM-6:00PM (Alphabet A)]" value="yes"/><span style="color: red;">Thursday 5:00 PM-6:00PM</span> (Persian Alphabet A)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Friday 4:30 PM- 5:30 PM (Iranology)]" value="yes"/><span style="color: red;">Friday 4:30 PM- 5:30 PM</span> (Iranology)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Saturday 11:00 AM-12:00 PM (Persian Conversation)]" value="yes"/><span style="color: red;">Saturday 11:00 AM-12:00 PM</span> (Persian Conversation workshop)<br><br>
+            <br>
+            <div>
+              <label for="terms_and_conditions">I agree to the <a href="Termsandservice.html">Terms of Service</a></label>
+              <input type="checkbox" id="terms_and_conditions" value="1" onclick="terms_changed(this)" />
+          </div>
+          </div>
+          <button type="submit" id="submit_button" class="submitbtn" disabled>Continue</button>
+        </form>
+      </div>
+      <script>
+function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            location.assign("registrationstep2.html")
+          });
+        });
+      </script>
+    </body>
+</html>

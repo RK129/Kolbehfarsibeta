@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Registration</title>
+        <!-- CSS stylesheets -->
+        <link rel="stylesheet" href="css/registrationmobile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- SEO optimization -->
+        <meta name=”robots” content="index, nofollow">
+        <meta name="keywords" content="registration, Kolbeh, Class">
+        <meta property="og:site_name" content="Registration" />
+        <link rel="canonical" href="https://kolbehfarsi.com" />
+        <meta name="description" content="Register for our classes!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="photoshopedlogo808.ico">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3ab9722e6f.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"></script>
+      </head>
+<body style="background-color: #007f7f;">
+
+
+    
+      <div class="main-block">
+
+        <form action="https://sheetdb.io/api/v1/lm568yg4bjulf" id="sheetdb-form" autocomplete="off">
+          <div class="title">
+        <h2>Register on your mobile device!</h2>
+        <br>
+        <br>
+          </div>
+          <div class="info">
+            <input required type="text" name="data[parent's name]" placeholder="Parent's Full name"><br><br>
+            <input required type="text" name="data[parent's email]" placeholder="Parent's Email"><br><br>
+            <input required type="text" name="data[parent's number]" placeholder="Parent's Phone number"><br><br>
+            <input required type="text" name="data[student's name]" placeholder="Student's Full Name"><br><br>
+            <input type="text" name="data[student's number]" placeholder="Student's Phone Number (optional)"><br><br>
+            <input required type="text" name="data[student's date of birth]" placeholder="Student's Date of Birth"><br><br>
+
+            <!-- classes multiple choice -->
+            
+
+          </div>
+          <div class="checkbox">
+            <label>Classes:</label><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Tuesday 4:00PM-4:30 PM (educational workshop)]" value="yes"/><span style="color: red;">Tuesday 4:00PM-4:30 PM</span><br>(educational workshop for 3-6 years)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Tuesday 5:00 PM-6:00PM (Alphabet B)]" value="yes"/><span style="color: red;">Tuesday 5:00 PM-6:00PM</span><br> (Persian Alphabet B)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Wednesday 5:00 PM (Painting class)]" value="yes"/><span style="color: red;">Wednesday 5:00 PM</span> (Painting class)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Thursday 5:00 PM-6:00PM (Alphabet A)]" value="yes"/><span style="color: red;">Thursday 5:00 PM-6:00PM</span><br> (Persian Alphabet A)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Friday 4:30 PM- 5:30 PM (Iranology)]" value="yes"/><span style="color: red;">Friday 4:30 PM- 5:30 PM</span> (Iranology)<br><br>
+            <input type="checkbox" class="checkboxsizing" name="data[Saturday 11:00 AM-12:00 PM (Persian Conversation)]" value="yes"/><span style="color: red;">Saturday 11:00 AM-12:00 PM</span><br> (Persian Conversation workshop)<br><br>
+            <br>
+            <div>
+              <label for="terms_and_conditions">I agree to the <a href="Termsandservice.html">Terms of Service</a></label>
+              <input type="checkbox" id="terms_and_conditions" value="1" onclick="terms_changed(this)" />
+          </div>
+          </div>
+          <button style="border-radius: 10px;" type="submit" id="submit_button" class="submitbtn" disabled>Procceed to Pay</button>
+        </form>
+      </div>
+      <script>
+function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            location.assign("registrationstep2.html")
+          });
+        });
+        
+      </script>
+    </body>
+</html>
