@@ -35,6 +35,9 @@
     crossorigin="anonymous"></script>
 </head>
 
+
+  
+
 <body class="body">
   <div class="d-none d-lg-block">
     <nav class="navbar navbar-expand-lg navbar-light navbar-right" style="background-color: #71c9ce;">
@@ -96,7 +99,9 @@
       </div>
     </nav>
   </div>   
-
+  <div class="d-block d-lg-none">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Spring registration now available!</button>
+  </div>
   <div class="#gifbg">
     <h1 class="lime invidst glow" style="padding: 1.5% 0;">Kolbeh Bazi Ba Farsi</h1>
     <h1 class="lime invidst glow" style="padding: 0 1.5%;">به کلبه بازی با فارسی خوش آمدید</h2>
@@ -393,6 +398,26 @@
       </div>
       <a class="Termsandservicehover"  href="Termsandservice.html">Terms and Service/Class Rules</a>
     </section>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        location.assign("registrationmobile.html")
+      }
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"></script>
