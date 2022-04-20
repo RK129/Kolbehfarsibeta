@@ -14,10 +14,11 @@
       text-align: center;
     }
     .parent-form {
-      height: 28rem;
+      height: 35rem;
     }
     .img1 {
-      padding: 2rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
     }
     button {
       border-radius: 5px;
@@ -36,10 +37,16 @@
             <a href="registrationmobile.html"><button type="submit" id="submit_button" class="btn2hover">Register another child</button></a>
           </div>
           <br>
-          <a href="https://www.pzo.info/farsi_class"><button type="submit" id="submit_button" class="submitbtn">Submit</button></a>
+          <a href="#"><button type="submit" id="submit_button waitlist" class="submitbtn" onclick="alertfunction()">Submit Waitlist</button></a>
+          <br><br>
+          <a href="https://www.pzo.info/farsi_class"><button type="submit" id="submit_button" class="submitbtn">Continue to Pay</button></a>
+          <br><br>
         </div>  
       <script>
-
+        function alertfunction() {
+          alert("Waitlist registered!");
+          setTimeout(location.replace("https://www.kolbehfarsi.com", 3000));
+        }
       </script>
     </body>
 </html>
