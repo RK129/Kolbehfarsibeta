@@ -13,6 +13,14 @@
 
 
 
+//This is .htaccess file 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+
 
 //This is registration link with navbar-brand class for navbar//
 //Current use: no need for registration//
