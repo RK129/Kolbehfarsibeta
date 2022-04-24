@@ -81,6 +81,9 @@
   .img1 {
     width: 50px;
   }
+  .sefriendly {
+    margin-top: -3rem;
+  }
 }
 
 
@@ -253,6 +256,7 @@ iframe {
 .Termsandservicehover {
   color: green;
 }
+
 
 .matchinggamenav {
   position: relative;
@@ -480,7 +484,7 @@ iframe {
 
 .grads {
   height: 67vh;
-  width: 45vh;
+  width: 44vh;
 }
 
 
