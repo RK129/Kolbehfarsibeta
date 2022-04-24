@@ -5,7 +5,7 @@
     line-height: normal;
   }
   .img1 {
-    width: 230rem;
+    width: 200rem;
   }
   .tr1 {
     text-align: center;
@@ -48,6 +48,9 @@
    width: 0;
    height: 0;
   }
+  .text-home {
+    padding-top: 0rem; 
+  }
 }
 
 @media (max-width: 1024px) {
@@ -69,7 +72,15 @@
   .widgetmobilefriendly {
     font-size: 2rem;
   }
+}
 
+@media (max-width: 400px) {
+  p {
+    font-size: 1rem;
+  }
+  .img1 {
+    width: 50px;
+  }
 }
 
 
@@ -183,6 +194,11 @@ iframe {
   list-style-type:none;
 }
 
+.text-home {
+  padding-top: 6rem; 
+  font-weight: 300;
+}
+
 
 .top {
   place-self:end;
@@ -266,6 +282,13 @@ iframe {
   background-image: url('https://i.pinimg.com/originals/1d/15/d8/1d15d8da8b3b6f3a895828ba2663f409.gif');
   margin: 5rem;
   z-index: 1px;
+}
+
+.mobiledes {
+  /* font-size: 0.3rem; */
+  /* line-height:0px; */
+  /* width: 100%; */
+  font-size: 3px;
 }
 
 .fixed {
